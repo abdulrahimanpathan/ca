@@ -1,4 +1,4 @@
-i<?php
+<?php
 
 namespace App\Models;
 
@@ -11,7 +11,7 @@ class Team extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'logo_uri', club_state];
+    protected $fillable = ['name', 'logo_uri', 'club_state'];
 	
     /**
      * Get the players for the team.
