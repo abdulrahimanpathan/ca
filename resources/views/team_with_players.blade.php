@@ -3,7 +3,7 @@
 <div class="container">
   <br/>
   @if(!empty($team_details))
-  <h3>Team <strong>{{$team_details->name }} </strong>details:</h3><br/>
+  <h3>Team <a href="/teams/{{$team_details->id}}/show"><strong>{{$team_details->name }} </strong></a>details:</h3><br/>
   <div style="width: 10%">
     Team logo :<br/>
     <img src="{!! url('/images/'.$team_details->logo_uri) !!}" alt="{{ $team_details->name }}" width="5%" height="5%" style="display:block; width:100%; height:auto;">
