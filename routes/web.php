@@ -38,3 +38,11 @@ Route::post('players/store', [
         "as"   => "player.store",
         "uses" => "PlayerController@store",
 ]);
+Route::get('fixtures', [
+        "as"   => "fixture.index",
+        "uses" => "FixtureController@index",
+]);
+Route::get('points-table', [
+        "as"   => "points.index",
+        "uses" => "PointsController@index",
+]);

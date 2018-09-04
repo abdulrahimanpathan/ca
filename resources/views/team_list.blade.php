@@ -19,10 +19,10 @@
   <tbody>
     @foreach($teams as $team)
     <tr>
-      <td style="width: 6px"><img src="{!! url('/images/'.$team['logo_uri']) !!}" alt="{{ $team['name'] }}" width="5%" height="5%" style="display:block; width:100%; height:auto;"></td>
+      <td><img src="{!! url('/images/'.$team['logo_uri']) !!}" alt="{{ $team['name'] }}" width="100px" height="100px"></td>
 
-      <td style="width: 6px">{{$team['name']}}</td>
-      <td style="width: 6px"><a href="{{ route('team.show', $team['id']) }}" class="btn btn-info">View</a></td>
+      <td>{{$team['name']}}</td>
+      <td><a href="{{ route('team.show', $team['id']) }}" class="btn btn-info">View</a></td>
     </tr>
     @endforeach
   </tbody>

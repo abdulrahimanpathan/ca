@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Team;
 
 class Match extends Model
 {
@@ -20,7 +21,7 @@ class Match extends Model
     {
         return $this->hasOne('App\Models\Result');
     }
-    **
+    /**
      * Get the team1 name.
      *
      * @param  string  $value
@@ -28,10 +29,10 @@ class Match extends Model
      */
     public function getTeam1NameAttribute()
     {
-	$team = App\Models\Team::find($this->team1_id);
+	$team = Team::find($this->team1_id);
 	return $team->name;
     }
-    **
+    /**
      * Get the team2 name.
      *
      * @param  string  $value
@@ -39,7 +40,7 @@ class Match extends Model
      */
     public function getTeam2NameAttribute()
     {
-        $team = App\Models\Team::find($this->team2_id);
+        $team =Team::find($this->team2_id);
         return $team->name;
     }
 }

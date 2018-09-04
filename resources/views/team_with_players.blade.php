@@ -6,7 +6,7 @@
   <h3>Team <a href="/teams/{{$team_details->id}}/show"><strong>{{$team_details->name }} </strong></a>details:</h3><br/>
   <div style="width: 10%">
     Team logo :<br/>
-    <img src="{!! url('/images/'.$team_details->logo_uri) !!}" alt="{{ $team_details->name }}" width="5%" height="5%" style="display:block; width:100%; height:auto;">
+    <img src="{!! url('/images/'.$team_details->logo_uri) !!}" alt="{{ $team_details->name }}" width="100px" height="100px">
   </div>
   <h3>Players list :</h3>
   <table class="table table-striped">
@@ -21,10 +21,10 @@
     @if(count($team_details->players) > 0)
       @foreach($team_details->players as $player)
       <tr>
-        <td style="width: 6px"><img src="{!! url('/images/'.$player->image_uri) !!}" alt="{{ $player->name }}" width="2%" height="2%" style="display:block; width:50%; height:10%;"></td>
+        <td><img src="{!! url('/images/'.$player->image_uri) !!}" alt="{{ $player->name }}" width="100px" height="100px"></td>
 
-        <td style="width: 6px">{{$player->first_name}}</td>
-        <td style="width: 6px">{{$player->last_name}}</td>
+        <td>{{$player->first_name}}</td>
+        <td>{{$player->last_name}}</td>
       </tr>
       @endforeach
     @else

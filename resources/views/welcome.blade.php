@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Cricket assessment</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -83,9 +83,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="/teams">Team</a>
-                    <a href="/teams/create">Create Team</a>
-                    <a href="/players/create">Create Player</a>
+                    <a href="/teams">Teams</a>
+                    <a href="/teams/create">Add Team</a>
+                    <a href="/players/create">Add Player</a>
+                    <a href="/fixtures">Fixtures</a>
+                    <a href="/points-table">Points Table</a>
                 </div>
             </div>
         </div>
