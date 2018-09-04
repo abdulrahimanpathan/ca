@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\Team;
 use App\Repositories\TeamRepository;
 
 class TeamController extends Controller
@@ -51,7 +52,7 @@ class TeamController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Team $request)
     {
         $this->team->store($request);
         return redirect('teams/create')->with('success', 'Team Created successfully');
