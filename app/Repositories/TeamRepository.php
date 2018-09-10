@@ -35,7 +35,6 @@ class TeamRepository
 	public function getTeam($id)
 	{
 		$team = Team::find($id);
-		//dd($team->players);
 		return $team;
 	}
 }

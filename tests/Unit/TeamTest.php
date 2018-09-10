@@ -52,4 +52,23 @@ class TeamTest extends TestCase
 
         $response->assertSee('The Red Chord');
     }
+    /**
+     * Testing validation on database fields
+     * @expectedException \Illuminate\Database\QueryException
+     *
+     * @return void
+     */
+    public function testValidationOnStore()
+    {
+        $data = array();
+        $team = Team::create($data);
+    }
+    /*
+    * test show team with incorrect ID
+    */
+    public function testShowTeamWithWrongId()
+    {
+        $response = $this->get('teams/686/show');
+        $response->assertSee('No data present for the given id');
+    }
 }
