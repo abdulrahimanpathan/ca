@@ -20,5 +20,11 @@ class Result extends Model
     {
         return $this->belongsTo('App\Models\Match');
     }
-
+    /**
+     * Get the winner of the match
+     */
+    public function winner()
+    {
+        return $this->belongsTo('App\Models\Team');
+    }
 }
